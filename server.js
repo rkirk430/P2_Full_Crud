@@ -17,6 +17,7 @@
 //2. Create a new server (ie instance of express)
 //3. Set PORT variable
 
+const { response } = require('express')
 const express = require ('express')
 const app = express()
 const PORT = 4000
@@ -28,7 +29,11 @@ app.set('view engine','ejs')
 
 // Import data into server.js from your models folder (which will house the database information)
 const products = require ('./models/data.js')
-console.log(products);
+console.log(products); //Products registerd on console
+
+// Set Home Route
+app.get('/', (request,response) => response.send("Welcome to the Food Page"));
+
 
 
 
