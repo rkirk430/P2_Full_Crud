@@ -22,6 +22,15 @@ const app = express()
 const PORT = 4000
 app.set('view engine','ejs')
 
+//============================================================================================================
+//                                              Add Your Models
+//============================================================================================================
+
+// Import data into server.js from your models folder (which will house the database information)
+const products = require ('./models/data.js')
+console.log(products);
+
+
 
 // 4. Start the server
 app.listen(PORT, () => console.log(`Running on Port ${PORT}`))
