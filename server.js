@@ -7,14 +7,20 @@
     // Step 5: Check dependencies in package.json
     // Step 6: nodemon
 
+// Steps to set up EJS
+    // Step 1: npm i ejs
+    // Step 2: App Configurations: app.set('view engine', 'ejs')
+    // Step 3: Create new directory called views & files inside will be .ejs 
+
+
 //1. Import Express
-const express = require ('express')
-
 //2. Create a new server (ie instance of express)
-const app = express()
-
 //3. Set PORT variable
+
+const express = require ('express')
+const app = express()
 const PORT = 4000
+app.set('view engine','ejs')
 
 
 // 4. Start the server
