@@ -1,7 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+<%- include ('partials/head.ejs') %>
 
 <body>
-    
+    <h2>Menu</h2>
+    <% for (let i =0; i<cookies.length; i++) {%>
+        <%const baked=cookies[i]%>
+
+        <h1>
+            <a href="/cookies/<%=i%>">
+                <%=cookies[i].name%>
+            </a>
+        </h1>
+        <image src="<%=cookies[i].image%>"/>
+        <% } %>
 </body>
 </html>
