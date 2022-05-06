@@ -19,19 +19,13 @@
 const { response } = require('express')
 const express = require ('express')
 const app = express()
-const PORT = 4000
+const PORT = process.env.PORT || 4000
 app.set('view engine','ejs')
 
-//============================================================================================================
-//                                              Add Your Models
-//============================================================================================================
 
-// Import data into server.js from your models folder (which will house the database information)
-const cookies = require ('./models/cookie.js')
-console.log(cookies); //Products registerd on console
 
 // Set Home Route
-app.get('/', (request,response) => response.send("Welcome to the Food Page"));
+// app.get('/', (request,response) => response.send("Welcome to the Food Page"));
 
 //Additional Routes
 app.use(express.urlencoded({extended: false}))
